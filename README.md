@@ -5,7 +5,6 @@
 * `docker run`
 
 ```bash
-# By docker run
 docker run -d \
     --name=redis \
     --hostname=redis \
@@ -15,7 +14,7 @@ docker run -d \
     icmdb/redis 
 ```
 
-or
+* `docker-compose.yml`
 
 ```bash
 version: "3"
