@@ -1,5 +1,12 @@
 # icmdb/redis
 
+This project is used to build a configurable redis image based on official's.
+
+## Reference
+
+* [redis](https://hub.docker.com/_/redis).
+* [redis.conf](http://download.redis.io/redis-stable/redis.conf)
+
 ## Quick Start
 
 * `docker run`
@@ -33,7 +40,6 @@ services:
      - 6379:6379
     restart: always
 ```
-
 
 ## Todo
 
