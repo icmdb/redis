@@ -4,8 +4,8 @@ This project is used to build a configurable redis image based on official's.
 
 ## Reference
 
-* [redis](https://hub.docker.com/_/redis).
-* [redis.conf](http://download.redis.io/redis-stable/redis.conf)
+* Base Image: [redis](https://hub.docker.com/_/redis)
+* Configfile: [redis.conf](http://download.redis.io/redis-stable/redis.conf)
 
 ## Quick Start
 
@@ -41,8 +41,11 @@ services:
     restart: always
 ```
 
-## Todo
+## Todo List
 
-* Sential 
-* Monit
+* [ ] Monit
+* [ ] Configfile 
+* [ ] Yaml for k8s
+* [ ] Helm Charts
+* [ ] Sential 
 
