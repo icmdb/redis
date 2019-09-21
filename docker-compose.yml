@@ -11,7 +11,7 @@ services:
      - REDIS_DEBUG=
      - REDIS_DELAY=1
      - REDIS_PORT=6379
-     - REDIS_REQUIREPASS=123654
+     - REDIS_REQUIREPASS=Redis@Pass0rd
      - REDIS_RENAME_COMMAND_CONFIG=renamedconfig
     #volumes:
     # - /proc/sys/net/core/somaxconn:/proc/sys/net/core/somaxconn:rw

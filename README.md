@@ -15,7 +15,7 @@ This project is used to build a configurable redis image based on official's.
 docker run -d \
     --name=redis \
     --hostname=redis \
-    -e REDIS_REQUIREPASS=123654  \
+    -e REDIS_REQUIREPASS=Redis@Pass0rd \
     -e REDIS_RENAME_COMMAND_CONFIG=renamedconfig \
     -p 6379:6379 \
     icmdb/redis 
@@ -34,7 +34,7 @@ services:
      - REDIS_DEBUG=
      - REDIS_DELAY=1
      - REDIS_PORT=6379
-     - REDIS_REQUIREPASS=123654
+     - REDIS_REQUIREPASS=Redis@Pass0rd
      - REDIS_RENAME_COMMAND_CONFIG=renamedconfig
     ports:
      - 6379:6379
