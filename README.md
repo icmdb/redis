@@ -1,2 +1,11 @@
 # redis
-A configurable redis image based on official's.
+
+## Quick Start
+
+```bash
+docker-compose up
+```
+
+## ToDo
+
+* Sential 

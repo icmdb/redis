@@ -1,0 +1,20 @@
+version: "3"
+services:
+  redis:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: redis
+    hostname: redis
+    image: icmdb/redis:5.0.5
+    environment:
+     - REDIS_DEBUG=1
+     - REDIS_PORT=12345
+     - REDIS_REQUIREPASS=123654
+     - REDIS_RENAME_COMMAND_CONFIG=4b5ecb0c51194ecefbea4b241eebe058
+    #volumes:
+    # - /proc/sys/net/core/somaxconn:/proc/sys/net/core/somaxconn:rw
+    # - /sys/kernel/mm/transparent_hugepage/enabled:/sys/kernel/mm/transparent_hugepage/enabled:rw
+    ports:
+     - 6379:6379
+    restart: always
