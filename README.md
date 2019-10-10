@@ -4,8 +4,12 @@ This project is used to build a configurable redis image based on official's.
 
 ## Reference
 
-* Base Image: [redis](https://hub.docker.com/_/redis)
-* Configfile: [redis.conf](http://download.redis.io/redis-stable/redis.conf)
+* [Get Docker Engine - Community for Ubuntu - Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+* [Install Docker Compose - Docker](https://docs.docker.com/compose/install/)
+* [redis.conf - redis.io](http://download.redis.io/redis-stable/redis.conf)
+* [redis - DockerHub](https://hub.docker.com/_/redis)
+* [ngbdf/redis-manager - GitHub](https://github.com/ngbdf/redis-manager)
+* [z-song/redis-manager - GitHub](https://github.com/z-song/redis-manager)
 
 ## Quick Start
 
@@ -43,6 +47,7 @@ services:
 
 ## Todo List
 
+* [x] Managemnt
 * [ ] Monit
 * [ ] Configfile 
 * [ ] Yaml for k8s

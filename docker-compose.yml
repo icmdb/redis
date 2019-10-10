@@ -1,21 +1,42 @@
 version: "3"
+networks:
+  redisnet:
+
 services:
   redis:
     build:
       context: .
       dockerfile: ./Dockerfile
+    networks:
+     - redisnet
     container_name: redis
     hostname: redis
-    image: icmdb/redis
+    image: icmdb/redis:5.0.5
     environment:
      - REDIS_DEBUG=
      - REDIS_DELAY=1
      - REDIS_PORT=6379
-     - REDIS_REQUIREPASS=Redis@Pass0rd
+     - REDIS_REQUIREPASS=Passw0rd4Redis
      - REDIS_RENAME_COMMAND_CONFIG=renamedconfig
-    #volumes:
+    volumes:
+     - ./redisdata/data:/data
     # - /proc/sys/net/core/somaxconn:/proc/sys/net/core/somaxconn:rw
     # - /sys/kernel/mm/transparent_hugepage/enabled:/sys/kernel/mm/transparent_hugepage/enabled:rw
     ports:
      - 6379:6379
     restart: always
+
+    #  redis-manager:
+    #    build:
+    #      context: .
+    #      dockerfile: ./Dockerfile-redis-manager
+    #networks:
+    # - redisnet
+    #    container_name: redis
+    #    hostname: redis
+    #    image: redis-manager
+    #    environment:
+    #     - XXX=
+    #    ports:
+    #     - 8080:8080
+    #    restart: always
