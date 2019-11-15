@@ -11,7 +11,7 @@ services:
      - redisnet
     container_name: redis
     hostname: redis
-    image: icmdb/redis:5.0.5
+    image: icmdb/redis:5.0.6
     environment:
      - REDIS_DEBUG=
      - REDIS_DELAY=1
